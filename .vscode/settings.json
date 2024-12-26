@@ -1,0 +1,17 @@
+{
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/styles"
+        }
+    ],
+    "liveSassCompile.settings.includeItems": [
+        "/scss/**/*.scss"
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "/**/node_modules/**"
+    ]
+}

@@ -1,0 +1,73 @@
+@use 'fonts';
+@use 'colors';
+
+$containerWidth: 800px;
+$containerWidthFlexible: 80vw;
+
+#quizCategory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    #conclusion {
+        width: $containerWidth;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+
+        h1 {
+            font-weight: normal;
+            font-size: 3rem;
+        }
+
+        img {
+            aspect-ratio: 21/9;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
+    #nav-btns {
+        width: $containerWidth;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        .nav-btn {
+            width: fit-content;
+            min-width: 265px;
+            font-family: fonts.$bodyFont;
+            padding: 10px;
+            background: colors.$primary700;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s;
+            
+            &:hover {
+                background: colors.$accent2700
+            }
+
+            &:active {
+                background: colors.$accent1700
+            }
+        }
+    }
+}
+
+@media (max-width: 864px) {
+    #quizCategory {
+        #conclusion, #nav-btns {
+            width: $containerWidthFlexible !important;
+        }
+    }
+}

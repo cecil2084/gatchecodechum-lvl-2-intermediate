@@ -1,0 +1,65 @@
+[
+    {
+        "question": "How do you prefer to study?",
+        "answers": [
+            {
+                "text": "With friends",
+                "type": "Social"
+            },
+            {
+                "text": "Alone",
+                "type": "Independent"
+            },
+            {
+                "text": "With a tutor",
+                "type": "Guided"
+            },
+            {
+                "text": "In a group",
+                "type": "Collaborative"
+            }
+        ]
+    },
+    {
+        "question": "How do you take notes?",
+        "answers": [
+            {
+                "text": "Typed",
+                "type": "Tech-Savvy"
+            },
+            {
+                "text": "Written",
+                "type": "Traditional"
+            },
+            {
+                "text": "Recorded",
+                "type": "Audio-Learner"
+            },
+            {
+                "text": "Don't take notes",
+                "type": "Nonchalant"
+            }
+        ]
+    },
+    {
+        "question": "When do you study best?",
+        "answers": [
+            {
+                "text": "Morning",
+                "type": "Early Bird"
+            },
+            {
+                "text": "Afternoon",
+                "type": "Balanced"
+            },
+            {
+                "text": "Evening",
+                "type": "Night Owl"
+            },
+            {
+                "text": "Late Night",
+                "type": "Insomniac"
+            }
+        ]
+    }
+]

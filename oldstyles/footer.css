@@ -1,0 +1,220 @@
+footer {
+    display: flex;
+    justify-content: center;
+    color: var(--lightNeutral500);
+}
+
+footer h2 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary700);
+    font-size: 16px;
+}
+
+footer a:hover {
+    color: var(--accent2700);
+}
+
+footer a:active {
+    color: var(--accent1700);
+}
+
+#footer-container {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 960px;
+    gap: 25px;
+}
+
+#top-section {
+    display: flex;
+    gap: 50px;
+}
+
+#company-logo-email {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+#company-logo-email>img {
+    width: 300px;
+}
+
+#footer-contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#footer-contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#footer-contact-us-description {
+    display: flex;
+    flex-direction: column;
+}
+
+#email-input-row {
+    width: 265px;
+    display: flex;
+    border-radius: 9999px;
+    border: 2px solid var(--lightNeutral500)
+}
+
+#email-input-row input {
+    font-size: 16px;
+    border-radius: 9999px;
+    background: none;
+    padding: 12px;
+    width: calc(100% - 24px);
+    border: none;
+}
+
+#email-input-row input:focus {
+    outline: none;
+}
+
+#email-input-row button {
+    font-size: 16px;
+    border-radius: 9999px;
+    right: 2px;
+    background-color: var(--primary700);
+    padding: 10px;
+    border: 0;
+    color: white;
+    font-family: 'quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+#email-input-row button:hover {
+    background-color: var(--accent2700);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#email-input-row button:active {
+    background-color: var(--accent1700);
+}
+
+.vr {
+    min-width: 1px;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#footer-links {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 0 20%;
+}
+
+.footer-link-column ul {
+    font-family: 'quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 12px;
+}
+
+.hr, .temp-hr {
+    min-height: 1px;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.temp-hr {
+    display: none;
+}
+
+#bottom-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-social-media {
+    display: flex;
+    gap: 16px;
+}
+
+.fa-brands {
+    font-size: 25px;
+    color: var(--primary700);
+}
+
+.fa-brands:hover {
+    color: var(--accent2700);
+}
+
+.fa-brands:active {
+    color: var(--accent1700);
+}
+
+@media (max-width: 1024px) {
+    #footer-container {
+        width: 768px;
+    }
+}
+
+@media (max-width: 864px) {
+    #footer-container {
+        width: 540px;
+    }
+}
+
+@media (max-width: 640px) {
+    .vr {
+        display: none;
+    }
+
+    .temp-hr {
+        display: block;
+    }
+
+    #top-section {
+        flex-direction: column;
+    }
+
+    #company-logo-email {
+        align-items: center;
+    }
+
+    #footer-contact-us, .footer-link-column{
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-links, #bottom-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bottom-section {
+        gap: 25px;
+    }
+
+    .copyright{
+        text-align: center;
+    }
+}

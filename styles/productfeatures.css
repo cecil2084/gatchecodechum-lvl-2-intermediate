@@ -1,0 +1,194 @@
+#cover-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+#cover-page #title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+#cover-page #title img {
+  width: 40vw;
+}
+#cover-page #title h2 {
+  font-weight: normal;
+  color: #2EABF1;
+}
+#cover-page #title a {
+  text-decoration: none;
+}
+#cover-page #title a button {
+  color: white;
+  background: #2EABF1;
+  border-radius: 9999px;
+  padding: 10px;
+  border: none;
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#cover-page #title a button:hover {
+  background: #FF9D14;
+  font-weight: bold;
+}
+#cover-page #title a button:active {
+  background: #FAD92C;
+  font-weight: bold;
+}
+#cover-page #greeting-bird-container {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cover-page #greeting-bird-container img {
+  width: 70vw;
+  transform: translate(20%, 70px);
+}
+
+.article-module {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 100px 0;
+}
+.article-module .description {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+.article-module .description h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
+.article-module img {
+  max-height: 75vh;
+  border-radius: 25px;
+  box-shadow: 0px 10px 20px 0px rgba(255, 255, 255, 0);
+}
+
+#matching-feature {
+  background-color: #333333;
+  color: white;
+}
+
+#weekly-challenges h1,
+#matching-feature h1 {
+  color: #FF9D14;
+}
+
+#in-app-communication {
+  background-color: #F5F5F5;
+  color: #333333;
+}
+
+#weekly-challenges {
+  background-color: #2EABF1;
+  color: white;
+  text-align: center;
+  z-index: 999;
+  position: relative;
+}
+#weekly-challenges img:nth-child(2) {
+  transform: translateY(40%);
+}
+#weekly-challenges img:nth-child(4) {
+  transform: translateY(-40%);
+}
+
+#mockup-stacked {
+  display: none;
+  position: relative;
+}
+#mockup-stacked img {
+  display: block;
+  position: relative;
+}
+#mockup-stacked img:nth-child(1) {
+  transform: translate(-10%, -10%);
+}
+#mockup-stacked img:nth-child(2) {
+  transform: translate(10%, 10%);
+}
+
+@media (max-aspect-ratio: 1200/800) {
+  #weekly-challenges {
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 200px;
+  }
+  #weekly-challenges > img {
+    display: none;
+  }
+  #mockup-stacked {
+    display: block;
+    height: 75vh;
+  }
+  #mockup-stacked img {
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+}
+@media (max-aspect-ratio: 1/1) {
+  #weekly-challenges {
+    justify-content: space-evenly;
+    padding: 20px 0;
+  }
+  #mockup-stacked {
+    display: block;
+    height: 50vh;
+  }
+  #mockup-stacked img {
+    height: 60vh;
+  }
+  #mockup-stacked img:nth-child(2) {
+    transform: translate(0%, 10%);
+  }
+  #mockup-stacked img:nth-child(1) {
+    transform: translate(0%, -10%);
+  }
+  #cover-page {
+    flex-direction: column;
+  }
+  #cover-page > img {
+    width: 70vw;
+  }
+  #cover-page #greeting-bird-container {
+    height: 20vh;
+  }
+  #cover-page #greeting-bird-container img {
+    height: 75vh;
+    width: auto;
+    transform: translateY(40%);
+  }
+}
+@media (max-aspect-ratio: 760/1000) {
+  .article-module {
+    flex-direction: column;
+  }
+  #weekly-challenges {
+    height: auto;
+    gap: 0;
+    overflow: hidden;
+  }
+  #weekly-challenges img:nth-child(2),
+  #weekly-challenges img:nth-child(4) {
+    display: block;
+  }
+  #weekly-challenges img:nth-child(2) {
+    transform: translateY(-20%);
+  }
+  #weekly-challenges img:nth-child(4) {
+    transform: translateY(20%);
+  }
+  #mockup-stacked {
+    display: none;
+  }
+}/*# sourceMappingURL=productfeatures.css.map */

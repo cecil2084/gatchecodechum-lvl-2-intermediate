@@ -1,0 +1,226 @@
+@use 'fonts';
+@use 'colors';
+
+// Vertical line color
+$vrHrColor: rgba(0, 0, 0, 0.2);
+
+// Footer Styles
+footer {
+    display: flex;
+    justify-content: center;
+    color: colors.$lightNeutral500;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    a {
+        text-decoration: none;
+        color: colors.$primary700;
+
+        &:hover {
+            color: colors.$accent2700;
+        }
+
+        &:active {
+            color: colors.$accent1700;
+        }
+    }
+}
+
+#footer-container {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 960px;
+    gap: 25px;
+
+    #top-section {
+        display: flex;
+        gap: 50px;
+
+        #company-logo-email {
+            display: flex;
+            gap: 50px;
+            flex-direction: column;
+
+            > img {
+                width: 300px;
+            }
+        }
+
+        #footer-contact-us {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                font-family: fonts.$bodyFont;
+            }
+
+            #footer-contact-us-description {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #email-input-row {
+                width: 265px;
+                display: flex;
+                border-radius: 9999px;
+                border: 2px solid colors.$lightNeutral500;
+
+                input {
+                    font-size: 16px;
+                    border-radius: 9999px;
+                    background: none;
+                    padding: 12px;
+                    width: calc(100% - 24px);
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    font-size: 16px;
+                    border-radius: 9999px;
+                    right: 2px;
+                    background-color: colors.$primary700;
+                    padding: 10px;
+                    border: 0;
+                    color: white;
+                    font-family: fonts.$bodyFont;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: colors.$accent2700;
+                        font-weight: bold;
+                        transition: background-color 0.3s ease, transform 0.3s ease;
+                    }
+
+                    &:active {
+                        background-color: colors.$accent1700;
+                    }
+                }
+            }
+        }
+    }
+
+    .vr {
+        min-width: 1px;
+        min-height: 100%;
+        background-color: $vrHrColor;
+    }
+
+    #footer-links {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+
+        .footer-link-column {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            flex: 1 0 20%;
+
+            ul {
+                font-family: fonts.$bodyFont;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                gap: 12px;
+            }
+        }
+    }
+
+    .hr, .temp-hr {
+        min-height: 1px;
+        min-width: 100%;
+        background-color: $vrHrColor;
+
+        &.temp-hr {
+            display: none;
+        }
+    }
+
+    #bottom-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        #footer-social-media {
+            display: flex;
+            gap: 16px;
+
+            .fa-brands {
+                font-size: 25px;
+                color: colors.$primary700;
+
+                &:hover {
+                    color: colors.$accent2700;
+                }
+
+                &:active {
+                    color: colors.$accent1700;
+                }
+            }
+        }
+    }
+}
+
+// Responsive Styles
+@media (max-width: 1024px) {
+    #footer-container {
+        width: 768px;
+    }
+}
+
+@media (max-width: 864px) {
+    #footer-container {
+        width: 540px;
+    }
+}
+
+@media (max-width: 640px) {
+    .vr {
+        display: none;
+    }
+
+    .temp-hr {
+        display: block;
+    }
+
+    #top-section {
+        flex-direction: column;
+    }
+
+    #company-logo-email {
+        align-items: center;
+    }
+
+    #footer-contact-us, .footer-link-column {
+        align-items: center;
+        text-align: center;
+    }
+
+    #footer-links, #bottom-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bottom-section {
+        gap: 25px;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}

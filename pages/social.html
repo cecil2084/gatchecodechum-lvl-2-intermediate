@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studdy - Social Student</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='../styles/main-style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../styles/quiz.css">
+    <link href='../styles/header.css' rel='stylesheet'>
+    <link href='../styles/footer.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../styles/quiz-category.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img id="header_logo" src="../assets/text_logo_large.svg" alt="study header logo" /></a>
+        <nav>
+            <ul>
+                <li><a href="quiz.html">Take the Quiz!</a></li>
+                <li><a href="#">Abous Us</a></li>
+                <li><a href="#">Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="quizCategory">
+
+        <section id="conclusion">
+            <h1>Social Student</h1>
+            <img src="../assets/categories/social-student.jpg" alt="social student image">
+            <p>
+                You are a Social Student who thrives in group settings and collaborative environments. You find energy
+                and motivation from interacting with your peers and often excel in team projects and group discussions.
+                For you, learning is not just about absorbing information but also about exchanging ideas and
+                perspectives with others. You actively participate in class, enjoy study groups, and prefer to prepare
+                for exams with your friends. Your strong communication skills allow you to articulate your thoughts
+                clearly and engage in meaningful conversations. You benefit from environments that encourage teamwork,
+                such as collaborative assignments and classroom debates. Networking and building connections are second
+                nature to you, as you understand the value of learning from others' experiences.
+            </p>
+        </section>
+
+        <section id="nav-btns">
+            <button class="nav-btn" onclick="window.location.href='quiz.html'">Start Over Again</button>
+            <button class="nav-btn" onclick="window.location.href='index.html'">Home</button>
+        </section>
+    </main>
+
+
+    <footer>
+        <div id="footer-container">
+            <section id="top-section">
+                <div id="company-logo-email">
+                    <img src="../assets/Logo.svg" alt="Studdy Logo Large">
+
+                    <section id="footer-contact-us">
+                        <div id="footer-contact-us-description">
+                            <h2>Stay Connected</h2>
+                            <p>Have questions or feedback? Reach out to us!</p>
+                            <p>
+                                <a href="">contactus@studdyapp.com</a>
+                            </p>
+                        </div>
+
+                        <form action="/subscribe" method="POST" class="newsletter-form">
+                            <label for="newsletter-email" class="visually-hidden">Email Address</label>
+                            <div id="email-input-row">
+                                <input type="email" id="newsletter-email" name="email"
+                                    placeholder="Enter your email address" required />
+                                <button type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+
+                <div class="temp-hr"></div>
+                <div class="vr"></div>
+
+                <nav id="footer-links">
+                    <section class="footer-link-column">
+                        <h2>Features</h2>
+                        <ul>
+                            <li><a href="#">Compatibility Matching</a></li>
+                            <li><a href="#">Study Goals</a></li>
+                            <li><a href="#">Chat & Collaboration</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="footer-link-column">
+                        <h2>How it Works</h2>
+                        <ul>
+                            <li><a href="#">Getting Started</a></li>
+                            <li><a href="#">Profile Matching</a></li>
+                            <li><a href="#">Safety and Privacy</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="footer-link-column">
+                        <h2>About Us</h2>
+                        <ul>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Meet the Team</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </section>
+                </nav>
+            </section>
+
+            <div class="hr"></div>
+
+            <section id="bottom-section">
+                <div id="footer-social-media">
+                    <a href="#" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    <p>&copy; 2024 Studdy: Where Minds Meet. All rights reserved.</p>
+                </div>
+            </section>
+
+        </div>
+    </footer>
+
+    <script src="../scripts/scroll-header-transparency-effect.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+:root {
+    /* primary (blues) */
+    --primary500: #86CEF7;
+    --primary600: #52B9F3;
+    --primary700: #2EABF1;
+    --primary800: #2078A9;
+    --primary900: #1C6893;
+
+    --lightNeutral500: #404040;
+    --darkNeutral900: #333333;
+
+    --accent1700: #FAD92C;
+    --accent2700: #FF9D14;
+
+    --offWhite: #F5F5F5;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Fredoka', 'Quicksand', 'Montserrat', 'Raleway', 'Arial', sans-serif;
+    font-weight: 600;
+}
+
+p {
+    margin: 0;
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

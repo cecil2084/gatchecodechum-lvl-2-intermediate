@@ -1,0 +1,243 @@
+body {
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin-top: 100px;
+  background-color: #F5F5F5;
+  color: #333333;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: "Fredoka", "Quicksand", "Montserrat", "Raleway", "Arial", sans-serif;
+  font-weight: 600;
+}
+body p {
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body #app {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 2px 2rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  padding-top: calc(2rem + 12px + 24px);
+}
+body #app #computer-title-bar {
+  width: 100%;
+  background: #F5F5F5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 12px;
+}
+body #app #computer-title-bar #computer-traffic-lights-container {
+  display: flex;
+  gap: 12px;
+}
+body #app #computer-title-bar #computer-traffic-lights-container .traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-style: solid;
+}
+body #app #computer-title-bar #computer-traffic-lights-container #red-light {
+  background: #e5685c;
+  border-color: #cd4c3e;
+}
+body #app #computer-title-bar #computer-traffic-lights-container #yellow-light {
+  background: #f3be4f;
+  border-color: #d79f3b;
+}
+body #app #computer-title-bar #computer-traffic-lights-container #green-light {
+  background: #61c554;
+  border-color: #51a83e;
+}
+body #app #quiz-header {
+  text-align: center;
+}
+body #app #quiz-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+body #app #quiz-header p {
+  font-size: 1rem;
+  color: #666;
+}
+body #app .progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #e1e1e1;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+body #app .progress-bar-container .progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #2EABF1;
+  border-radius: 5px;
+  transition: width 0.2s ease-in-out;
+}
+body #app main .loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body #app main .question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 25px;
+}
+body #app main .question .question-image {
+  border-radius: 1rem;
+  width: 100%;
+  aspect-ratio: 21/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #app main .question h2 {
+  align-self: flex-start;
+  font-weight: normal;
+}
+body #app main .question .options {
+  display: flex;
+  gap: 16px;
+}
+body #app main .question .options label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  background: #e1e1e1;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+body #app main .question .options label:hover {
+  background: #9e9e9e;
+}
+body #app main .question .options label input {
+  height: 1.5rem;
+}
+body #app main .question .options label input:checked {
+  background: #2EABF1;
+}
+body #app main .question .options label .choice-image {
+  aspect-ratio: 1/1;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #app main #navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+body #app main #navigation-buttons button.hidden {
+  display: none;
+}
+body #app main .nav-btn {
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  background: #2EABF1;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+body #app main .nav-btn:hover {
+  background: #FF9D14;
+}
+body #app main .nav-btn:active {
+  background: #FAD92C;
+}
+body #app main #submit-btn {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  color: white;
+  background: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body #app main #submit-btn:hover {
+  background: #0056b3;
+}
+body #app main #submit-btn.hidden {
+  display: none;
+}
+body #app main #result {
+  text-align: center;
+}
+body #app main #result h2 {
+  font-size: 1.5rem;
+  color: #007BFF;
+}
+body #app main #result.hidden {
+  display: none;
+}
+
+@media (max-width: 968px) {
+  #app {
+    width: 80vw;
+  }
+}
+@media (max-width: 864px) {
+  body {
+    margin-top: 150px;
+  }
+  body #app main {
+    width: 100%;
+  }
+  body #app main .question .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  body #app main .question .options label {
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  body #app {
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+  body #app .choice-image {
+    width: 34vw !important;
+  }
+}/*# sourceMappingURL=quiz.css.map */

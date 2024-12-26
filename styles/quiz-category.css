@@ -1,0 +1,59 @@
+#quizCategory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+#quizCategory #conclusion {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+}
+#quizCategory #conclusion h1 {
+  font-weight: normal;
+  font-size: 3rem;
+}
+#quizCategory #conclusion img {
+  aspect-ratio: 21/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+#quizCategory #conclusion p {
+  text-align: left;
+}
+#quizCategory #nav-btns {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+#quizCategory #nav-btns .nav-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 265px;
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  background: #2EABF1;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#quizCategory #nav-btns .nav-btn:hover {
+  background: #FF9D14;
+}
+#quizCategory #nav-btns .nav-btn:active {
+  background: #FAD92C;
+}
+
+@media (max-width: 864px) {
+  #quizCategory #conclusion, #quizCategory #nav-btns {
+    width: 80vw !important;
+  }
+}/*# sourceMappingURL=quiz-category.css.map */

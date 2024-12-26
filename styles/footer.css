@@ -1,0 +1,182 @@
+footer {
+  display: flex;
+  justify-content: center;
+  color: #404040;
+}
+footer h2 {
+  font-size: 36px;
+  font-weight: 500;
+}
+footer a {
+  text-decoration: none;
+  color: #2EABF1;
+}
+footer a:hover {
+  color: #FF9D14;
+}
+footer a:active {
+  color: #FAD92C;
+}
+
+#footer-container {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 960px;
+  gap: 25px;
+}
+#footer-container #top-section {
+  display: flex;
+  gap: 50px;
+}
+#footer-container #top-section #company-logo-email {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+#footer-container #top-section #company-logo-email > img {
+  width: 300px;
+}
+#footer-container #top-section #footer-contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#footer-container #top-section #footer-contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#footer-container #top-section #footer-contact-us #footer-contact-us-description {
+  display: flex;
+  flex-direction: column;
+}
+#footer-container #top-section #footer-contact-us #email-input-row {
+  width: 265px;
+  display: flex;
+  border-radius: 9999px;
+  border: 2px solid #404040;
+}
+#footer-container #top-section #footer-contact-us #email-input-row input {
+  font-size: 16px;
+  border-radius: 9999px;
+  background: none;
+  padding: 12px;
+  width: calc(100% - 24px);
+  border: none;
+}
+#footer-container #top-section #footer-contact-us #email-input-row input:focus {
+  outline: none;
+}
+#footer-container #top-section #footer-contact-us #email-input-row button {
+  font-size: 16px;
+  border-radius: 9999px;
+  right: 2px;
+  background-color: #2EABF1;
+  padding: 10px;
+  border: 0;
+  color: white;
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+#footer-container #top-section #footer-contact-us #email-input-row button:hover {
+  background-color: #FF9D14;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#footer-container #top-section #footer-contact-us #email-input-row button:active {
+  background-color: #FAD92C;
+}
+#footer-container .vr {
+  min-width: 1px;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#footer-container #footer-links {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+#footer-container #footer-links .footer-link-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 0 20%;
+}
+#footer-container #footer-links .footer-link-column ul {
+  font-family: "Quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 12px;
+}
+#footer-container .hr, #footer-container .temp-hr {
+  min-height: 1px;
+  min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#footer-container .hr.temp-hr, #footer-container .temp-hr.temp-hr {
+  display: none;
+}
+#footer-container #bottom-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#footer-container #bottom-section #footer-social-media {
+  display: flex;
+  gap: 16px;
+}
+#footer-container #bottom-section #footer-social-media .fa-brands {
+  font-size: 25px;
+  color: #2EABF1;
+}
+#footer-container #bottom-section #footer-social-media .fa-brands:hover {
+  color: #FF9D14;
+}
+#footer-container #bottom-section #footer-social-media .fa-brands:active {
+  color: #FAD92C;
+}
+
+@media (max-width: 1024px) {
+  #footer-container {
+    width: 768px;
+  }
+}
+@media (max-width: 864px) {
+  #footer-container {
+    width: 540px;
+  }
+}
+@media (max-width: 640px) {
+  .vr {
+    display: none;
+  }
+  .temp-hr {
+    display: block;
+  }
+  #top-section {
+    flex-direction: column;
+  }
+  #company-logo-email {
+    align-items: center;
+  }
+  #footer-contact-us, .footer-link-column {
+    align-items: center;
+    text-align: center;
+  }
+  #footer-links, #bottom-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  #bottom-section {
+    gap: 25px;
+  }
+  .copyright {
+    text-align: center;
+  }
+}/*# sourceMappingURL=footer.css.map */

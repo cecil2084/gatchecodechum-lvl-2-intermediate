@@ -1,0 +1,331 @@
+@use 'fonts';
+@use 'colors';
+
+$trafficSize: 12px;
+$titleBarPadding: 12px;
+$appPadding: 2rem;
+$appBorderRadius: 1rem;
+
+body {
+    font-family: fonts.$bodyFont;
+    padding: 0;
+    margin-top: 100px;
+    background-color: colors.$offWhite;
+    color: colors.$darkNeutral900;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: fonts.$headerFont;
+        font-weight: 600;
+    }
+
+    p {
+        font-family: fonts.$bodyFont;
+    }
+
+    #app {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: $appPadding;
+        background: white;
+        box-shadow: 0 2px 2rem rgba(0, 0, 0, 0.5);
+        border-radius: $appBorderRadius;
+        padding-top: calc($appPadding + $trafficSize + $titleBarPadding * 2);
+
+        #computer-title-bar {
+            width: 100%;
+            background: colors.$offWhite;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: $titleBarPadding;
+            // border-top-left-radius: $appBorderRadius;
+            // border-top-right-radius: $appBorderRadius;
+
+            #computer-traffic-lights-container {
+                display: flex;
+                gap: 12px;
+
+                .traffic-light {
+                    width: $trafficSize;
+                    height: $trafficSize;
+                    border-radius: 9999px;
+                    border-width: 1px;
+                    border-style: solid;
+                }
+
+                #red-light {
+                    background: colors.$macRed;
+                    border-color: colors.$macRedBorder;
+                }
+
+                #yellow-light {
+                    background: colors.$macYellow;
+                    border-color: colors.$macYellowBorder;
+                }
+
+                #green-light {
+                    background: colors.$macGreen;
+                    border-color: colors.$macGreenBorder;
+                }
+            }
+        }
+
+        #quiz-header {
+            text-align: center;
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+                color: #666;
+            }
+        }
+
+        // Container for the progress bar
+        .progress-bar-container {
+            width: 100%;
+            height: 10px;
+            background-color: colors.$lightNeutral100;
+            border-radius: 5px;
+            margin-top: 20px;
+
+            // Progress bar itself
+            .progress-bar {
+                width: 0;
+                height: 100%;
+                background-color: colors.$primary700; // Progress color
+                border-radius: 5px;
+                transition: width 0.2s ease-in-out; 
+            }
+        }
+
+        main {
+
+            //circular loading spinner
+            .loader {
+                border: 8px solid #f3f3f3;
+                border-top: 8px solid #3498db;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                animation: spin 2s linear infinite;
+                margin: 0 auto;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .question {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 1.5rem;
+                gap: 25px;
+
+                .question-image {
+                    border-radius: 1rem;
+                    width: 100%;
+                    aspect-ratio: 21/9;
+                    object-fit: cover;
+                }
+
+                h2 {
+                    align-self: flex-start;
+                    font-weight: normal;
+                }
+
+                .options {
+                    display: flex;
+                    gap: 16px;
+
+                    label {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        padding: 10px;
+                        border-radius: 1rem;
+                        background: colors.$lightNeutral100;
+                        margin-bottom: 0.5rem;
+                        cursor: pointer;
+                        text-align: center;
+                        transition: all 0.2s;
+
+                        &:hover {
+                            background: colors.$lightNeutral300;
+                        }
+
+
+                        input {
+                            height: 1.5rem;
+
+                            &:checked {
+                                background: colors.$primary700;
+                            }
+                        }
+
+                        // input {
+                        //     display: none;
+
+                        //     &:checked+.radio-label::before {
+                        //         background-color: colors.$primary700;
+                        //         border-color: colors.$darkNeutral900;
+                        //     }
+
+                        //     &:checked+.radio-label::after {
+                        //         content: "";
+                        //         position: absolute;
+                        //         left: 5px;
+                        //         top: 50%;
+                        //         transform: translateY(-50%);
+                        //         height: 10px;
+                        //         width: 10px;
+                        //         background-color: #fff;
+                        //         border-radius: 50%;
+                        //     }
+                        // }
+
+                        .choice-image {
+                            aspect-ratio: 1/1;
+                            width: 150px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+
+            #navigation-buttons {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+
+                button.hidden {
+                    display: none;
+                }
+            }
+
+            .nav-btn {
+                font-family: fonts.$bodyFont;
+                padding: 10px;
+                background: colors.$primary700;
+                color: white;
+                font-size: 1rem;
+                border: none;
+                border-radius: 9999px;
+                cursor: pointer;
+                transition: all 0.2s;
+
+                &:hover {
+                    background: colors.$accent2700
+                }
+
+                &:active {
+                    background: colors.$accent1700
+                }
+            }
+
+            #submit-btn {
+                display: block;
+                margin: 1rem auto;
+                padding: 0.75rem 2rem;
+                font-size: 1rem;
+                color: white;
+                background: #007BFF;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+
+                &:hover {
+                    background: #0056b3;
+                }
+
+                &.hidden {
+                    display: none;
+                }
+            }
+
+            #result {
+                text-align: center;
+
+                h2 {
+                    font-size: 1.5rem;
+                    color: #007BFF;
+                }
+
+                &.hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 968px) {
+    #app {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 864px) {
+    body {
+        margin-top: 150px;
+
+        #app {
+            main {
+                width: 100%;
+
+                .question {
+                    .options {
+                        // flex-wrap: wrap;
+                        // justify-content: center;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        width: 100%;
+
+                        label {
+                            align-items: center;
+                            // flex: 0 0 50%;
+                            box-sizing: border-box;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        #app {
+            margin: 0;
+            width: 100vw;
+            box-sizing: border-box;
+            border-radius: 0;
+
+            .choice-image {
+                width: 34vw !important;
+            }
+        }
+    }
+}
